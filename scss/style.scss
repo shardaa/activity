@@ -1,0 +1,135 @@
+$blue: #5a6f90;
+$orange: #ee5a36;
+$light-blue: #f7f7f7;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.color-blue {
+  background-color: $blue;
+}
+.color-orange {
+  background-color: $orange;
+}
+.color-light-blue {
+  color: $blue;
+}
+.border-orange {
+  border: 1px solid $orange;
+  border-radius: 5px;
+}
+.text-orange {
+  color: $orange;
+}
+.text-blue {
+  color: $blue;
+}
+.border-none {
+  border: none !important;
+}
+.tab {
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  .tab-div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;
+    min-width: 150px;
+    button {
+      width: 100%;
+      padding: 20px 0;
+      font-weight: bold;
+      border-right: 1px solid $blue;
+      background-color: $light-blue;
+    }
+  }
+  button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  button.active {
+    background-color: $blue;
+    color: #fff;
+  }
+}
+.tab-layout {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+.modal-width {
+  width: 800px;
+}
+.checkbox-custom {
+  li {
+    margin: 0 10px;
+  }
+}
+.spiner {
+  background-color: $light-blue;
+}
+table {
+  border: 1px solid black;
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+}
+
+.custom-card {
+  position: relative;
+}
+
+.custom-card.selected {
+  &::before {
+    content: "";
+    position: absolute !important;
+    margin: 0 0.8rem;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: auto;
+    background-color: $orange;
+  }
+}
+
+tr {
+  td {
+    text-align: right;
+  }
+  td:nth-child(1),
+  td:nth-child(2) {
+    text-align: left;
+  }
+}
+
+.offline {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: $blue;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 10em;
+  &:after {
+    content: "Offline";
+  }
+}
